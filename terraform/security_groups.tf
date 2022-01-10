@@ -1,4 +1,4 @@
-# us-east-2 region
+# us-east-1 region
 resource "aws_security_group" "ssh_east" {
   name   = "ssh_22"
   vpc_id = aws_vpc.vpc_east.id

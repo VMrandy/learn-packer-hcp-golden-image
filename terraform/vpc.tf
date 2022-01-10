@@ -1,4 +1,4 @@
-# us-east-2 region
+# us-east-1 region
 resource "aws_vpc" "vpc_east" {
   cidr_block           = var.cidr_vpc_east
   enable_dns_support   = true
@@ -12,7 +12,7 @@ resource "aws_internet_gateway" "igw_east" {
 resource "aws_subnet" "subnet_public_east" {
   vpc_id     = aws_vpc.vpc_east.id
   cidr_block = var.cidr_subnet_east
-  availability_zone = "us-east-2a"
+  availability_zone = "us-east-1a"
 }
 
 resource "aws_route_table" "rtb_public_east" {

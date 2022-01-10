@@ -59,7 +59,7 @@ No modules.
 | <a name="input_hcp_bucket_hashicups"></a> [hcp\_bucket\_hashicups](#input\_hcp\_bucket\_hashicups) | HCP Packer bucket name for base golden image | `string` | `"learn-packer-hcp-hashicups-image"` | no |
 | <a name="input_hcp_bucket_loki"></a> [hcp\_bucket\_loki](#input\_hcp\_bucket\_loki) | HCP Packer bucket name for loki image | `string` | `"learn-packer-hcp-loki-image"` | no |
 | <a name="input_hcp_channel"></a> [hcp\_channel](#input\_hcp\_channel) | HCP Packer channel name | `string` | `"production"` | no |
-| <a name="input_region_east"></a> [region\_east](#input\_region\_east) | The default region where Terraform deploys your resources | `string` | `"us-east-2"` | no |
+| <a name="input_region_east"></a> [region\_east](#input\_region\_east) | The default region where Terraform deploys your resources | `string` | `"us-east-1"` | no |
 | <a name="input_region_west"></a> [region\_west](#input\_region\_west) | The second region where Terraform deploys your resources | `string` | `"us-west-2"` | no |
 
 ## Outputs

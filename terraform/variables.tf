@@ -23,7 +23,7 @@ variable "environment_tag" {
 
 variable "region_east" {
   description = "The default region where Terraform deploys your resources"
-  default     = "us-east-2"
+  default     = "us-east-1"
 }
 
 variable "region_west" {

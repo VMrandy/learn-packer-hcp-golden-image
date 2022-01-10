@@ -9,14 +9,14 @@ data "hcp_packer_image" "loki" {
   bucket_name    = data.hcp_packer_iteration.loki.bucket_name
   iteration_id   = data.hcp_packer_iteration.loki.ulid
   cloud_provider = "aws"
-  region         = "us-east-2"
+  region         = "us-east-1"
 }
 
 provider "aws" {
   region = var.region_east
 }
 
-# This provider is used to deploy resources to 
+# This provider is used to deploy resources to
 # the us-west-2 region
 provider "aws" {
   alias  = "west"

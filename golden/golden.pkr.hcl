@@ -17,7 +17,7 @@ locals {
 }
 
 data "amazon-ami" "ubuntu-focal-east" {
-  region = "us-east-2"
+  region = "us-east-1"
   filters = {
     name                = "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"
     root-device-type    = "ebs"
@@ -30,7 +30,7 @@ data "amazon-ami" "ubuntu-focal-east" {
 source "amazon-ebs" "base_east" {
   ami_name      = "${var.ami_prefix}-${local.timestamp}"
   instance_type = "t2.micro"
-  region        = "us-east-2"
+  region        = "us-east-1"
   source_ami    = data.amazon-ami.ubuntu-focal-east.id
   ssh_username  = "ubuntu"
   tags = {

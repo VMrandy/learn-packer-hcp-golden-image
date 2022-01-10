@@ -21,7 +21,7 @@ data "hcp-packer-image" "golden_base_east" {
   bucket_name     = data.hcp-packer-iteration.golden.bucket_name
   iteration_id    = data.hcp-packer-iteration.golden.id
   cloud_provider  = "aws"
-  region          = "us-east-2"
+  region          = "us-east-1"
 }
 
 data "hcp-packer-image" "golden_base_west" {
@@ -38,7 +38,7 @@ locals {
 source "amazon-ebs" "hashicups_east" {
   ami_name      = "${var.ami_prefix}-${local.timestamp}"
   instance_type = "t2.micro"
-  region        = "us-east-2"
+  region        = "us-east-1"
   source_ami    = data.hcp-packer-image.golden_base_east.id
   ssh_username = "ubuntu"
   tags = {
@@ -97,7 +97,7 @@ build {
   }
 
   # Move temp files to actual destination
-  # Must use this method because their destinations are protected 
+  # Must use this method because their destinations are protected
   provisioner "shell" {
     inline = [
       "sudo cp /tmp/start-hashicups.sh /var/lib/cloud/scripts/per-boot/start-hashicups.sh",
